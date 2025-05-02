@@ -3,7 +3,7 @@ from time import sleep
 from numpy import genfromtxt
 import streamlit
 
-from .line import draw
+from line import draw
 
 
 def compute_error_for_line_given_points(constant: float, gradient: float, points: list[tuple[float, float]]) -> float:
@@ -54,9 +54,8 @@ def main(filename: str = "data.csv") -> tuple[float, float, list[tuple[float, fl
 
     error = compute_error_for_line_given_points(constant, gradient, list(data))
     print(f"{constant=} {gradient=} {error=}")
-    return constant, gradient, list(data)
+    draw(constant, gradient, data)
 
 
 if __name__ == "__main__":
-    constant, gradient, points = main()
-    draw(constant, gradient, points)
+    main()

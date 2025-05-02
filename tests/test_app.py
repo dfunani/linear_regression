@@ -1,4 +1,4 @@
-from ..app import (
+from linear_regression.app import (
     compute_error_for_line_given_points,
     compute_gradient_descent,
     step,
