@@ -5,7 +5,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-def draw(constant, gradient, points):
+def draw(constant: float, gradient: float, points: list[tuple[float, float]]) -> None:
+    """
+    Draws a line and plots data points using Streamlit and Matplotlib.
+    """
     st.title("Drawing a Line with Streamlit")
     st.subheader(f"Line Equation: y = {gradient:.1f}x + {constant:.1f}")
 
